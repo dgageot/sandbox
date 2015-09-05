@@ -1,47 +1,25 @@
 package main
 
 import "testing"
+import "github.com/assertgo/assert"
 
 func TestFooBarQix(t *testing.T) {
-	if foobarqix(1) != "1" {
-		t.Fail()
-	}
+	assert := assert.New(t)
 
-	if foobarqix(2) != "2" {
-		t.Fail()
-	}
-
-	if foobarqix(3) != "FooFoo" {
-		t.Fail()
-	}
-
-	if foobarqix(5) != "BarBar" {
-		t.Fail()
-	}
-
-	if foobarqix(7) != "QixQix" {
-		t.Fail()
-	}
-
-	if foobarqix(9) != "Foo" {
-		t.Fail()
-	}
-
-	if foobarqix(10) != "Bar" {
-		t.Fail()
-	}
-
-	if foobarqix(14) != "Qix" {
-		t.Fail()
-	}
-
-	if foobarqix(15) != "FooBarBar" {
-		t.Fail()
-	}
+	assert.That(foobarqix(1)).IsEqualTo("1")
+	assert.That(foobarqix(2)).IsEqualTo("2")
+	assert.That(foobarqix(3)).IsEqualTo("FooFoo")
+	assert.That(foobarqix(5)).IsEqualTo("BarBar")
+	assert.That(foobarqix(7)).IsEqualTo("QixQix")
+	assert.That(foobarqix(9)).IsEqualTo("Foo")
+	assert.That(foobarqix(10)).IsEqualTo("Bar")
+	assert.That(foobarqix(14)).IsEqualTo("Qix")
+	assert.That(foobarqix(15)).IsEqualTo("FooBarBar")
 }
 
 func ExampleFooBarQix() {
 	main()
+
 	// Output: 1
 	// 2
 	// FooFoo
