@@ -1,6 +1,6 @@
 package main
 
-func countCorrectColorWrongPosition(secret [4]string, guess [4]string) int {
+func CountCorrectColorWrongPosition(secret [4]string, guess [4]string) int {
 	count := 0
 
 	colors := make(map[string]bool)
@@ -38,7 +38,7 @@ func countWrongPosition(color string, secret [4]string, guess [4]string) int {
 	return inGuess
 }
 
-func countCorrectColorAndPosition(secret [4]string, guess [4]string) int {
+func CountCorrectColorAndPosition(secret [4]string, guess [4]string) int {
 	count := 0
 
 	for i := range secret {
